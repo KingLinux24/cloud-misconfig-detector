@@ -1,0 +1,18 @@
+# Cloud Misconfiguration Report (IaC)
+
+Total findings: {{ findings|length }}
+
+## Top Findings
+{% for f in findings[:10] %}
+### {{ loop.index }}. {{ f.title }} ({{ f.severity | upper }}) | Risk {{ f.risk_score }}
+Category: {{ f.category }}
+Resource: {{ f.resource.type }}.{{ f.resource.name }}
+File: {{ f.resource.file }}
+
+Evidence:
+{{ f.evidence }}
+
+Remediation:
+{{ f.remediation }}
+
+{% endfor %}
