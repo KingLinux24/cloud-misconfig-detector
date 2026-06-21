@@ -99,7 +99,7 @@ Findings are sorted descending by `risk_score`, so the report always leads with 
 
 ```bash
 # Clone and enter the repository
-git clone https://github.com/<your-username>/cloud-misconfig-detector.git
+git clone https://github.com/KingLinux24/cloud-misconfig-detector.git
 cd cloud-misconfig-detector
 
 # Create and activate a virtual environment
@@ -139,6 +139,7 @@ uvicorn src.api.app:app --reload --port 8000
 ```bash
 curl http://127.0.0.1:8000/report
 ```
+<img width="1651" height="895" alt="Screenshot 2026-06-22 002647" src="https://github.com/user-attachments/assets/907cec74-ff01-48cb-8a81-ee38d369d533" />
 
 If no report has been generated yet, the endpoint returns a `404` with a message pointing you back to the pipeline command, rather than a misleading `200 OK`.
 
@@ -151,6 +152,7 @@ For visual triage, launch the interactive dashboard:
 ```bash
 streamlit run src/frontend/dashboard.py
 ```
+<img width="1628" height="878" alt="Screenshot 2026-06-22 003204" src="https://github.com/user-attachments/assets/ba0823c8-d26b-4ae2-b863-7b8ead267b0d" />
 
 This opens `http://localhost:8501` and displays:
 
